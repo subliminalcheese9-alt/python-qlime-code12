@@ -1,0 +1,84 @@
+>>> def is_even(n):
+...     if n % 2 == 0:
+...         return True
+...     else:
+...         return False
+
+>>> is_even(2)
+True
+>>> is_even(3)
+False
+>>>
+
+>>> for number in range(1, 21):
+...     if number % 2 == 1:
+...         print(number)
+...
+1
+3
+5
+7
+9
+11
+13
+15
+17
+19
+
+
+>>> while True:
+...     choice = int(input('Enter AN EVEN Number!'))
+...     if choice % 2 == 0:
+...         print('YEAH!')
+...         break
+...     else:
+...         print('nope.')
+...         pass
+...
+Enter AN EVEN Number! 1
+nope.
+Enter AN EVEN Number! 3
+nope.
+Enter AN EVEN Number! 2
+YEAH!
+>>>
+
+>>> while True:
+...     choice = input('Whats The NUMBER???').strip()
+...     if choice == '0':
+...         print('DONE!')
+...         break
+...     else:
+...         pass
+...
+Whats The NUMBER??? 1
+Whats The NUMBER??? 2
+Whats The NUMBER??? 0
+DONE!
+
+>>> def stats(numbers):
+...                 average = sum(numbers) / len(numbers)
+...                 return 'Average:', average, ',', 'Sum:', sum(numbers)
+... numbers = [ ]
+... while True:
+...         choice = input('Hello! Enter Numbers! If Youre Done Type "Done"').strip()
+...         if choice == 'Done':
+...             print(stats(numbers))
+...             break
+...         elif choice != 'Done':
+...             try:
+...                 numbers.append(int(choice))
+...             except ValueError:
+...                 print('Please Enter A NUMBER!')
+...
+Output:
+
+Hello! Enter Numbers! If Youre Done Type "Done" Numbers?
+Please Enter A NUMBER!
+Hello! Enter Numbers! If Youre Done Type "Done" 1
+Hello! Enter Numbers! If Youre Done Type "Done" 2
+Hello! Enter Numbers! If Youre Done Type "Done" 3
+Hello! Enter Numbers! If Youre Done Type "Done" 4
+Hello! Enter Numbers! If Youre Done Type "Done" 5
+Hello! Enter Numbers! If Youre Done Type "Done" Done
+('Average:', 3.0, ',', 'Sum:', 15)
